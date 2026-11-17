@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b1020">
+<title>EZ SMP Control</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:#0b1020;color:#f1f5f9;
+  font-family:Arial,sans-serif;padding:20px;
+}
+.container{max-width:850px;margin:auto}
+header{
+  display:flex;justify-content:space-between;
+  align-items:center;margin-bottom:25px;
+}
+.logo{font-size:25px;font-weight:bold;color:#55e69b}
+.logo span{color:white}
+.tag{background:#172b27;color:#55e69b;padding:8px 12px;border-radius:20px;font-size:12px}
+.hero{
+  background:linear-gradient(135deg,#172b35,#17243c);
+  padding:25px;border-radius:18px;margin-bottom:18px;
+}
+.hero h1{font-size:27px;margin-bottom:8px}
+.hero p{color:#aab8ca;font-size:14px}
+.status{
+  display:flex;align-items:center;gap:10px;
+  margin-top:22px;font-weight:bold;
+}
+.dot{width:11px;height:11px;border-radius:50%;background:#ef6464}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.card{
+  background:#151d30;border:1px solid #263149;
+  border-radius:15px;padding:20px;margin-bottom:15px;
+}
+.card h2{font-size:17px;margin-bottom:17px}
+.number{font-size:27px;font-weight:bold}
+.muted{color:#8997ad;font-size:13px;margin-top:6px}
+.buttons{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+button{
+  border:0;padding:13px 5px;border-radius:9px;
+  color:white;background:#263b52;font-weight:bold;
+}
+button:disabled{opacity:.45}
+.start{background:#168653}
+.stop{background:#a53b49}
+.restart{background:#936a24}
+.console{
+  background:#080d17;border-radius:10px;
+  padding:15px;min-height:150px;
+  color:#8ce6ac;font-family:monospace;
+  font-size:12px;line-height:1.8;overflow-wrap:anywhere;
+}
+.notice{
+  background:#30291b;border:1px solid #66502b;
+  color:#f5d58b;padding:14px;border-radius:12px;
+  font-size:13px;line-height:1.6;margin-top:15px;
+}
+footer{text-align:center;color:#718096;font-size:12px;margin:25px 0}
+@media(max-width:500px){
+  .grid{grid-template-columns:1fr}
+  .buttons{grid-template-columns:1fr}
+  header{gap:10px}
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+  <div class="logo">EZ <span>SMP</span></div>
+  <div class="tag">CONTROL PANEL</div>
+</header>
+
+<section class="hero">
+  <h1>EZ SMP Control</h1>
+  <p>Seu servidor. Seu mundo. Seu controle.</p>
+  <div class="status">
+    <div class="dot"></div>
+    <span>Servidor desconectado</span>
+  </div>
+</section>
+
+<div class="grid">
+  <section class="card">
+    <h2>Jogadores online</h2>
+    <div class="number">--</div>
+    <div class="muted">Aguardando conexão</div>
+  </section>
+
+  <section class="card">
+    <h2>Versão</h2>
+    <div class="number">26.3</div>
+    <div class="muted">Paper Minecraft</div>
+  </section>
+</div>
+
+<section class="card">
+  <h2>Gerenciamento do servidor</h2>
+  <div class="buttons">
+    <button class="start" disabled>INICIAR</button>
+    <button class="stop" disabled>PARAR</button>
+    <button class="restart" disabled>REINICIAR</button>
+  </div>
+  <div class="muted" style="margin-top:14px">
+    Controles aguardando conexão com a hospedagem.
+  </div>
+</section>
+
+<section class="card">
+  <h2>Console do servidor</h2>
+  <div class="console">
+    EZ SMP Control iniciado...<br>
+    Interface carregada.<br>
+    Aguardando conexão com o servidor...
+  </div>
+</section>
+
+<div class="notice">
+  <strong>Conexão ainda não configurada</strong><br>
+  Esta é a interface do painel. Para controlar o Minecraft de verdade, ainda precisamos conectar uma hospedagem e configurar uma API segura.
+</div>
+
+<footer>
+  EZ SMP © 2026 — Desenvolvido para EZ SMP
+</footer>
+
+</div>
+</body>
+</html>
